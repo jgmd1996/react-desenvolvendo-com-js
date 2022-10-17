@@ -1,7 +1,19 @@
 import CampoTexto from '../CampoTexto/index.js';
+import ListaSuspensa from '../ListaSuspensa/index.js';
 import './Formulario.css'
 
 const Formulario = () => {
+
+    const times =[
+        'Programação',
+        'Front-End',
+        'Data Science',
+        'Devops',
+        'ux e Design',
+        'Mobile',
+        'Inovaçao e Gestão',
+
+    ]
     return(
         <section className="formulario">
             <form>
@@ -9,6 +21,7 @@ const Formulario = () => {
             <CampoTexto label="Nome" placeholder="Digite seu nome"/>
             <CampoTexto label="Cargo" placeholder="Digite seu cargo"/>
             <CampoTexto label="Imagem" placeholder="Digite o endereço da imagem"/>
+            <ListaSuspensa label="Time" itens={times}/>
             </form>
         </section>
     )
