@@ -4,7 +4,7 @@ import CampoTexto from '../CampoTexto/index.js';
 import ListaSuspensa from '../ListaSuspensa/index.js';
 import './Formulario.css'
 
-const Formulario = () => {
+const Formulario = (props) => {
 
     const times =[
         'Programação',
@@ -24,7 +24,12 @@ const Formulario = () => {
 
     const aoSalvar = (evento) => {
         evento.preventDefault()
-        console.log("Formulario Foi submetido", nome,cargo,imagem,time)
+        props.aoColaboradorCadastrado({
+            nome,
+            cargo,
+            imagem,
+            time
+        })
     }
     
     return(
