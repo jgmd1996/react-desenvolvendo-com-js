@@ -4,10 +4,16 @@ const CampoTexto = (props) =>{
 
     const placeholderModificada = `${props.placeholder}`
 
+    let valor = 'jojojo';
+    const aoDigitado =(evento) => {
+        valor= evento.target.value
+        console.log(valor)
+    }
+
     return (
         <div className="campo-texto">
             <label>{props.label}</label>
-            <input required={props.obrigatorio} placeholder={props.placeholder}/>
+            <input value={valor} onChange={aoDigitado} required={props.obrigatorio} placeholder={props.placeholder}/>
         </div>
     )
 }
